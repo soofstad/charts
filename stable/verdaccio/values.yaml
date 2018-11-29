@@ -3,6 +3,18 @@ image:
   tag: 3.8.1
   pullPolicy: IfNotPresent
 
+environmentsFromSecrets:
+  enabled: false
+
+env:
+  secret:
+    OAUTH_CLIENT_ID:
+      name:
+      key:
+    OAUTH_CLIENT_SECRET:
+      name:
+      key:
+
 service:
   annotations: {}
   clusterIP: ""
