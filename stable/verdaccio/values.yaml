@@ -6,11 +6,12 @@ image:
 environmentsFromSecrets:
   enabled: false
 
-env:
-  secret:
-    OAUTH_CLIENT_SECRET:
-      name: verdaccio-client-secret
-      key: OAUTH_CLIENT_SECRET
+# Set 'envrionmentsFromSecrets' to 'true' and uncomment and add your secret name and
+# key to load a secret as an environment variable in the container
+# env:
+#   secret:
+#       name: verdaccio-client-secret
+#       key: OAUTH_CLIENT_SECRET
 
 service:
   annotations: {}
