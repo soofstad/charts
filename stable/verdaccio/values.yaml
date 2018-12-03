@@ -8,12 +8,9 @@ environmentsFromSecrets:
 
 env:
   secret:
-    OAUTH_CLIENT_ID:
-      name:
-      key:
     OAUTH_CLIENT_SECRET:
-      name:
-      key:
+      name: verdaccio-client-secret
+      key: OAUTH_CLIENT_SECRET
 
 service:
   annotations: {}

@@ -33,11 +33,6 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{- if .Values.environmentsFromSecrets.enabled }}
           env:
-          - name: OAUTH_CLIENT_ID
-            valueFrom:
-              secretKeyRef:
-                name: {{ .Values.env.secret.OAUTH_CLIENT_ID.name }}
-                key: {{ .Values.env.secret.OAUTH_CLIENT_ID.key }}
           - name: OAUTH_CLIENT_SECRET
             valueFrom:
               secretKeyRef:
